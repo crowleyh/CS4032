@@ -1,7 +1,7 @@
 require 'socket'      # Sockets are in standard library
 
 hostname = 'localhost'
-port = 2000
+port = 8000
 
 s = TCPSocket.open(hostname, port)
 
@@ -9,7 +9,7 @@ s = TCPSocket.open(hostname, port)
  # puts line.chop      # And print with platform line terminator
  #end
  
-s.puts("KILL_SERVICE\n")
+#s.puts("KILL_SERVICE\n")
 
 s.puts("HELO\n")
 

@@ -1,6 +1,6 @@
 require 'socket'               # Get sockets from stdlib
 
-portnum = 2000
+portnum = ARGV[0] #take port number as argument from command line
 server = TCPServer.open(portnum)  # Socket to listen on port 2000
 
 
