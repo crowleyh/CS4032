@@ -12,7 +12,7 @@ end
 
 def serveClient(client, server, portnum)
   line = client.gets
-  if line.include?("HELO\n")
+  if line.include?("HELO")
     puts "special message received and reply sent"
     client.puts "HELO echoed text:"+ line +"IP:[#{IPAddress}]\nPort:[#{portnum}]\nStudentID:[10303365]"
   elsif line == "KILL_SERVICE\n"
