@@ -14,7 +14,7 @@ def serveClient(client, server, portnum)
   line = client.gets
   if line.include?("HELO\n")
     puts "special message received and reply sent"
-    client.puts "HELO text\nIP:[#{IPAddress}]\nPort:[#{portnum}]\nStudentID:[10303365]"
+    client.puts "HELO echoed text:"+ line +"IP:[#{IPAddress}]\nPort:[#{portnum}]\nStudentID:[10303365]"
   elsif line == "KILL_SERVICE\n"
     puts "Server closing"
     server.socket.close              #this needs to be fixed- atm it just crashes
